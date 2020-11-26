@@ -29,7 +29,7 @@ namespace Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUsers(int id)
         {
-            return _context.Users.FindAsync(id);
+            return await _context.Users.FindAsync(id);
         }
     }
 }
